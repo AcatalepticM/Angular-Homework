@@ -1,0 +1,102 @@
+<div class="card-body mx-auto bg-warning col-10 form-inline">
+  <div id="headerButtonsDiv" name="buttonsDiv" class="btn-block">
+    <button (click)="onClick('student')" type="button" id="studentButton" name="button" class="btn-danger btn-outline-dark col-1 text-capitalize text-white offset-2" style="margin-left: 285px">
+      Add student
+    </button>
+    <button (click)="onClick('teacher')" type="button" id="teacherButton" name="button" class="btn-danger btn-outline-dark col-1 text-capitalize text-white offset-5">
+      Add teacher
+    </button>
+  </div>
+  <div class="card-title mx-auto">
+    <h1 class="text-center">Students</h1>
+    <div class="card border-dark bg-warning">
+      <table class="text-center" border="1" cellpadding="5">
+        <thead>
+        <tr>
+          <th>
+            First Name
+          </th>
+          <th>
+            Last Name
+          </th>
+          <th>
+            Username
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            Phone #
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let student of students">
+          <td>
+            {{ student.firstName }}
+          </td>
+          <td>
+            {{ student.lastName }}
+          </td>
+          <td>
+            {{ student.username }}
+          </td>
+          <td>
+            {{ student.email }}
+          </td>
+          <td>
+            {{ student.phone }}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card-title mx-auto">
+    <h1 class="text-center">Teachers</h1>
+    <div class="card border-dark bg-warning">
+      <table class="text-center" border="1" cellpadding="5">
+        <thead>
+        <tr>
+          <th>
+            First Name
+          </th>
+          <th>
+            Last Name
+          </th>
+          <th>
+            Username
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            Phone #
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let teacher of teachers">
+          <td>
+            {{ teacher.firstName }}
+          </td>
+          <td>
+            {{ teacher.lastName }}
+          </td>
+          <td>
+            {{ teacher.username }}
+          </td>
+          <td>
+            {{ teacher.email }}
+          </td>
+          <td>
+            {{ teacher.phone }}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-table-entry-form [showModal]="showModal" [userType]="userType"></app-table-entry-form>
+<div id="modalInjection"></div>
+</div>

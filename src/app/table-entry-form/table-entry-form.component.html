@@ -1,0 +1,17 @@
+<div class="modal" id="modalForm" [style.display]="showModal ? 'block' : 'none'">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark text-white border-white">
+      <div class="modal-header">
+        <h5 class="modal-title text-capitalize" id="modalTitle">{{ userType }}</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" (click)="hide()">&times;</button>
+      </div>
+      <div class="modal-body">
+        HERE COME THE FORM INPUT FIELDS
+      </div>
+      <div class="modal-footer">
+        <button name="modalBtn" type="button" class="btn btn-danger btn-outline-dark text-capitalize text-white" data-dismiss="modal" (click)="hide()">Close</button>
+        <button name="modalBtn" type="button" class="btn btn-danger btn-outline-dark text-capitalize text-white">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
